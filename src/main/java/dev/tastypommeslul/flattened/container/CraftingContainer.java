@@ -1,4 +1,4 @@
-package dev.tastypommeslul.flattened.gui.container;
+package dev.tastypommeslul.flattened.container;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
