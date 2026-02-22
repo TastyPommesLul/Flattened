@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "flattened:block/crafting_net"
+    }
+  }
+}

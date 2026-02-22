@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "flattened",
+  "version": "${version}",
+  "name": "Flattened",
+  "description": "A simple Minecraft Mod for making flat worlds (without structures) a bit easier to play.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/flattened/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dev.tastypommeslul.flattened.client.FlattenedDataGenerator"
+    ],
+    "client": [
+      "dev.tastypommeslul.flattened.client.FlattenedClient"
+    ],
+    "main": [
+      "dev.tastypommeslul.flattened.Flattened"
+    ]
+  },
+  "mixins": [
+    "flattened.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
