@@ -23,7 +23,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(provider, recipeOutput) {
             @Override
             public void buildRecipes() {
-                shapeless(RecipeCategory.MISC, Items.COBBLESTONE)
+                shapeless(RecipeCategory.MISC, Items.COBBLESTONE_SLAB)
                         .unlockedBy(getHasName(ModItems.STONE_PEBBLE), has(ModItems.STONE_PEBBLE))
                         .requires(ModItems.STONE_PEBBLE, 4)
                         .save(recipeOutput);
@@ -37,6 +37,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("CS")
                         .define('C', Items.STRING)
                         .define('S', Items.STICK)
+                        .save(recipeOutput);
+                shaped(RecipeCategory.MISC, Items.COBBLESTONE)
+                        .unlockedBy(getHasName(Items.COBBLESTONE_SLAB), has(Items.COBBLESTONE_SLAB))
+                        .pattern("S")
+                        .pattern("S")
+                        .define('S', Items.COBBLESTONE_SLAB)
                         .save(recipeOutput);
             }
         };

@@ -48,7 +48,7 @@ public class Flattened implements ModInitializer {
             if (Blocks.TALL_GRASS.getLootTable().isEmpty()) return;
             if (Blocks.DIRT.getLootTable().get().equals(resourceKey)) {
                 LootPool.Builder lootPool = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(1))
+                        .setRolls(ConstantValue.exactly(2))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .with(LootItem.lootTableItem(ModItems.STONE_PEBBLE).setWeight(3).build())
                         .with(LootItem.lootTableItem(ModItems.IRON_CHUNKLET).setWeight(1).build());
