@@ -19,5 +19,6 @@ public class EnglishProvider extends FabricLanguageProvider {
         builder.add(ModItems.IRON_CHUNKLET, "Iron Chunklet");
         builder.add(ModItems.STONE_PEBBLE, "Stone Pebble");
         builder.add(ModBlocks.CRAFTING_NET, "Crafting Net");
+        builder.add(ModItems.STONE_HATCHET, "Stone Hatchet");
     }
 }

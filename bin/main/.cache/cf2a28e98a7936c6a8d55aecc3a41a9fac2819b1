@@ -1,0 +1,11 @@
+// 1.21.11	-999999999-01-01T00:00:00	Flattened/FlattenedRecipeProvider
+73b9d8792577e3a58620fa3c2699bd4cb553b5fd data/flattened/advancement/recipes/misc/cobblestone.json
+dcc21855e8e292e1377caefdfa4c7f44ba388277 data/flattened/advancement/recipes/misc/cobblestone_slab.json
+a5dd2c8c6f14cae222244877e8aa81d9c1d30cdb data/flattened/advancement/recipes/misc/crafting_net.json
+b2351b472d015a551d150cd7d62a4e2749bcdc03 data/flattened/advancement/recipes/misc/raw_iron.json
+444f93049287d11dd21d8319ee02be9d1b84a086 data/flattened/advancement/recipes/tools/stone_hatchet.json
+3ba5ccbbaa2a87c31bb9eb89b8cd321dcc8a5c90 data/flattened/recipe/cobblestone.json
+7490944821c9c6a15b46c400a5bfde809e3ea91e data/flattened/recipe/cobblestone_slab.json
+a523495557d245f4ad9f614b8942360d74ba5849 data/flattened/recipe/crafting_net.json
+3c3298bfba45df3a54a74d01af464c14ad0459ad data/flattened/recipe/raw_iron.json
+bd85df3b9a09a4e856d512f795d4e9b6d5176e77 data/flattened/recipe/stone_hatchet.json

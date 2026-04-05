@@ -2,6 +2,7 @@ package dev.tastypommeslul.flattened;
 
 import dev.tastypommeslul.flattened.block.ModBlocks;
 import dev.tastypommeslul.flattened.item.ModItems;
+import dev.tastypommeslul.flattened.item.ModToolMaterials;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -36,10 +37,17 @@ public class Flattened implements ModInitializer {
     public void onInitialize() {
         ModItems.init();
         ModBlocks.init();
+        ModToolMaterials.init();
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(entries -> {
             entries.accept(ModItems.STONE_PEBBLE);
             entries.accept(ModItems.IRON_CHUNKLET);
+        });
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> {
+            entries.accept(ModItems.STONE_HATCHET);
+        });
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> {
+            entries.accept(ModBlocks.CRAFTING_NET);
         });
 
         LootTableEvents.MODIFY.register((resourceKey, builder, lootTableSource, provider) -> {
@@ -48,7 +56,7 @@ public class Flattened implements ModInitializer {
             if (Blocks.TALL_GRASS.getLootTable().isEmpty()) return;
             if (Blocks.DIRT.getLootTable().get().equals(resourceKey)) {
                 LootPool.Builder lootPool = LootPool.lootPool()
-                        .setRolls(ConstantValue.exactly(2))
+                        .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.25f))
                         .with(LootItem.lootTableItem(ModItems.STONE_PEBBLE).setWeight(3).build())
                         .with(LootItem.lootTableItem(ModItems.IRON_CHUNKLET).setWeight(1).build());
@@ -85,6 +93,11 @@ public class Flattened implements ModInitializer {
         });
     }
 
+    /**
+     * A simple Identifier method
+     * @param name the Path's name
+     * @return Identifier with the mods namespace and id/path
+     */
     public static Identifier id(String name) {
         return Identifier.fromNamespaceAndPath(MOD_ID, name);
     }

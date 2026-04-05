@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "flattened:stone_pebble",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "CS",
+    " S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flattened:stone_hatchet"
+  }
+}

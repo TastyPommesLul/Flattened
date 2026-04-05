@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "flattened:iron_chunklet",
+    "flattened:iron_chunklet",
+    "flattened:iron_chunklet",
+    "flattened:iron_chunklet"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:raw_iron"
+  }
+}

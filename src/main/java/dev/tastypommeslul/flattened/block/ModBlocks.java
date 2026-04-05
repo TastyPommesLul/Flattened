@@ -20,6 +20,14 @@ public class ModBlocks {
             BlockBehaviour.Properties.of().strength(1.5F).sound(SoundType.WOOD).ignitedByLava(), true);
 
     //region Block Registration Helpers
+    /**
+     * Helper Method to register Blocks
+     * @param name Name of the block
+     * @param blockFactory the constructor shortcut ({className}::new)
+     * @param settings the properties (settings) of the block
+     * @param shouldRegisterItem Whether to register an item as well
+     * @return Returns the Block
+     */
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties settings, boolean shouldRegisterItem) {
         ResourceKey<Block> blockKey = keyOfBlock(name);
         Block block = blockFactory.apply(settings.setId(blockKey));

@@ -29,7 +29,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(recipeOutput);
                 shapeless(RecipeCategory.MISC, Items.RAW_IRON)
                         .unlockedBy(getHasName(ModItems.IRON_CHUNKLET), has(ModItems.IRON_CHUNKLET))
-                        .requires(ModItems.IRON_CHUNKLET, 3)
+                        .requires(ModItems.IRON_CHUNKLET, 4)
                         .save(recipeOutput);
                 shaped(RecipeCategory.MISC, ModBlocks.CRAFTING_NET)
                         .unlockedBy(getHasName(Items.BAMBOO), has(Items.BAMBOO))
@@ -43,6 +43,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("S")
                         .pattern("S")
                         .define('S', Items.COBBLESTONE_SLAB)
+                        .save(recipeOutput);
+                shaped(RecipeCategory.TOOLS, ModItems.STONE_HATCHET)
+                        .unlockedBy(getHasName(ModItems.STONE_PEBBLE), has(ModItems.STONE_PEBBLE))
+                        .pattern("CS")
+                        .pattern(" S")
+                        .define('S', Items.STICK)
+                        .define('C', ModItems.STONE_PEBBLE)
                         .save(recipeOutput);
             }
         };

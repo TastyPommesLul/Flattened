@@ -21,5 +21,6 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(@NonNull ItemModelGenerators gen) {
         gen.generateFlatItem(ModItems.STONE_PEBBLE, ModelTemplates.FLAT_ITEM);
         gen.generateFlatItem(ModItems.IRON_CHUNKLET, ModelTemplates.FLAT_ITEM);
+        gen.generateFlatItem(ModItems.STONE_HATCHET, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 }

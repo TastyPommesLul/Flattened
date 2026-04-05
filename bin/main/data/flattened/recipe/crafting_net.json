@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "minecraft:string",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "SC",
+    "CS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flattened:crafting_net"
+  }
+}
